@@ -23,7 +23,7 @@ class RowCustom extends StatelessWidget {
        iconleading,
         sw10,
         Expanded(child: TextCustom(text: midText,color: greyIcon,)),
-        iconTrailing!
+       if(iconTrailing!=null) iconTrailing!
       ],);
   }
 }
