@@ -13,7 +13,7 @@ class AppbarCustom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
+    return AppBar(elevation: 0,
       backgroundColor: blueApp,
       title: TextCustom(
         text: tittle,color: white,

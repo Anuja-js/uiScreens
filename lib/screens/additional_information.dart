@@ -23,18 +23,9 @@ class AdditionalInformation extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-          RowCustom(midText: "Share Dukaan App", iconleading: Icons.share_outlined,
-          icon:Icons.arrow_forward_ios_outlined ,
+          RowCustom(midText: "Share Dukaan App", iconleading:IconCustom(size: 30, color: greyIcon, icon: Icons.share_outlined), iconTrailing: null,
           ),
-            RowCustom(midText: "Change Language", iconleading: Icons.message_outlined,
-              icon:Icons.arrow_forward_ios_outlined ,
-            ),
-            RowCustom(midText: "Share Dukaan App", iconleading: Icons.share_outlined,
-              icon:Icons.arrow_forward_ios_outlined ,
-            ),
-            RowCustom(midText: "Share Dukaan App", iconleading: Icons.share_outlined,
-              icon:Icons.arrow_forward_ios_outlined ,
-            ),
+
 
         ],),
       )  ,
