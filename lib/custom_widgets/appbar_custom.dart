@@ -7,9 +7,11 @@ import '../constants/colors.dart';
 class AppbarCustom extends StatelessWidget {
  bool? center=true;
   Widget? icon;
+  IconData? trailing;
+
   String tittle;
   AppbarCustom({
-    required this.tittle,this.icon,this.center,
+    required this.tittle,this.icon,this.center,this.trailing,
     super.key,
   });
 
@@ -17,11 +19,15 @@ class AppbarCustom extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(elevation: 0,
       backgroundColor: blueApp,
-      centerTitle: center=true?true:false,
+      centerTitle: center==true?true:false,
       title: TextCustom(
         text: tittle,color: white,
       ),
       leading: icon,
+      actions: [
+       Icon(trailing),
+        sw10
+      ],
     );
   }
 }

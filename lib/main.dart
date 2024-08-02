@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uiscreens/screens/additional_information.dart';
-import 'package:uiscreens/screens/manage_storage.dart';
+import 'package:uiscreens/screens/payments.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,8 +10,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-     home: ManageStoreScreen(),
+    return  MaterialApp(
+     home: PaymentScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
