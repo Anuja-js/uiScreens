@@ -241,7 +241,7 @@ class PaymentScreen extends StatelessWidget {
                     itemBuilder: (  context,index){
                   return Row(mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Column(
+                      Column(crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
                             children: [
