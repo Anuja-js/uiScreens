@@ -12,21 +12,21 @@ import 'package:uiscreens/models/order.dart';
 class PaymentScreen extends StatelessWidget {
    PaymentScreen({Key? key}) : super(key: key);
   List<Orders> order=[
-    Orders("Oder #1688068","Jul 12, 02:06 PM","₹799","₹799 deposited to 58860200000138","Successful","assets/images/tshirt.jpeg"),
-    Orders("Oder #1457741","Apr 26, 07:47 AM","₹397.4","₹397.4 deposited to 58860200000138","Successful","assets/images/mug.jpeg"),
-    Orders("Oder #1408896","Apr 11, 10:54 PM","₹686.42 ","₹686.42 deposited to 58860200000138","Successful","assets/images/foldedblue.jpg"),
-    Orders("Oder #1369633","Apr 2, 11:29 AM","₹1123.5","₹1123.5 deposited to 58860200000138","Successful","assets/images/foldedblue.jpg"),
-    Orders("Oder #1370125","Apr 2, 11:29 AM","₹1722.75","₹1722.75 deposited to 58860200000138","Successful","assets/images/shirt.jpeg"),
-    Orders("Oder #1370568","Apr 1, 11:19 AM","₹884.17","₹884.17 deposited to 58860200000138","Successful","assets/images/shirt.jpeg"),
-    Orders("Oder #1359971","Apr 1, 10:37 AM","₹599.25","₹599.25 deposited to 58860200000138","Successful","assets/images/foldedblue.jpg"),
-    Orders("Oder #1265103","Mar 6, 01:26 PM","₹2,297","₹2297 deposited to 58860200000138","Successful","assets/images/white.jpeg"),
-    Orders("Oder #1173537","Feb 22, 10:04 PM","₹599.25","₹599.25 deposited to 58860200000138","Successful","assets/images/red.jpeg"),
-    Orders("Oder #1176731","Feb 21, 01:25 PM","₹524.25","₹524.25 deposited to 58860200000138","Successful","assets/images/tshirt.jpeg"),
-    Orders("Oder #1174245","Feb 21, 10:20 AM","₹699","₹699 deposited to 58860200000138","Successful","assets/images/white.jpeg"),
-    Orders("Oder #1177731","Feb 20, 9:54 AM","₹1123.5","₹1123.5 deposited to 58860200000138","Successful","assets/images/red.jpeg"),
-    Orders("Oder #1174282","Feb 19, 10:47 AM","₹799","₹799 deposited to 58860200000138","Successful","assets/images/red.jpeg"),
-    Orders("Oder #1174435","Feb 18, 12:08 PM","₹524.25","₹524.25 deposited to 58860200000138","Successful","assets/images/white.jpeg"),
-    Orders("Oder #1164892","Feb 13, 7:57 AM","₹524.25","₹524.25 deposited to 58860200000138","Successful","assets/images/white.jpeg"),
+    Orders("Order #1688068","Jul 12, 02:06 PM","₹799","₹799 deposited to 58860200000138","Successful","assets/images/red.jpeg"),
+    Orders("Order #1457741","Apr 26, 07:47 AM","₹397.4","₹397.4 deposited to 58860200000138","Successful","assets/images/mug.jpeg"),
+    Orders("Order #1408896","Apr 11, 10:54 PM","₹686.42 ","₹686.42 deposited to 58860200000138","Successful","assets/images/foldedblue.jpg"),
+    Orders("Order #1369633","Apr 2, 11:29 AM","₹1123.5","₹1123.5 deposited to 58860200000138","Successful","assets/images/foldedblue.jpg"),
+    Orders("Order #1370125","Apr 2, 11:29 AM","₹1722.75","₹1722.75 deposited to 58860200000138","Successful","assets/images/red.jpeg"),
+    Orders("Order #1370568","Apr 1, 11:19 AM","₹884.17","₹884.17 deposited to 58860200000138","Successful","assets/images/red.jpeg"),
+    Orders("Order #1359971","Apr 1, 10:37 AM","₹599.25","₹599.25 deposited to 58860200000138","Successful","assets/images/foldedblue.jpg"),
+    Orders("Order #1265103","Mar 6, 01:26 PM","₹2,297","₹2297 deposited to 58860200000138","Successful","assets/images/white.jpeg"),
+    Orders("Order #1173537","Feb 22, 10:04 PM","₹599.25","₹599.25 deposited to 58860200000138","Successful","assets/images/red.jpeg"),
+    Orders("Order #1176731","Feb 21, 01:25 PM","₹524.25","₹524.25 deposited to 58860200000138","Successful","assets/images/tshirt.jpeg"),
+    Orders("Order #1174245","Feb 21, 10:20 AM","₹699","₹699 deposited to 58860200000138","Successful","assets/images/white.jpeg"),
+    Orders("Order #1177731","Feb 20, 9:54 AM","₹1123.5","₹1123.5 deposited to 58860200000138","Successful","assets/images/red.jpeg"),
+    Orders("Order #1174282","Feb 19, 10:47 AM","₹799","₹799 deposited to 58860200000138","Successful","assets/images/red.jpeg"),
+    Orders("Order #1174435","Feb 18, 12:08 PM","₹524.25","₹524.25 deposited to 58860200000138","Successful","assets/images/white.jpeg"),
+    Orders("Order #1164892","Feb 13, 7:57 AM","₹524.25","₹524.25 deposited to 58860200000138","Successful","assets/images/white.jpeg"),
 
   ];
   @override
@@ -239,23 +239,46 @@ class PaymentScreen extends StatelessWidget {
                     shrinkWrap: true,
                     physics: NeverScrollableScrollPhysics(),
                     itemBuilder: (  context,index){
-                  return Row(mainAxisAlignment: MainAxisAlignment.start,
+                  return Column(crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Column(crossAxisAlignment: CrossAxisAlignment.start,
+                      Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
+                        Container(
+                          width: 50,
+                          margin: EdgeInsets.only(top: 5,bottom: 15,),
+                          height: 50,
+                          child: Image.asset(order[index].imagePath.toString(),fit: BoxFit.fill,),
+                        ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                            Container(
-                              width: 50,
-                              height: 50,
-                              child: Image.file(File(order[index].imagePath.toString())),
-                            ),
+                              Text(
+                                order[index].orderNumber.toString(),
+                                style: TextStyle(
+                                    color: blackHead,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16),
+                              ),
+                              TextCustom(color: greytext, text:    order[index].orderDate.toString(),size: 16,)
+                            ],
+                          ),sw25,
+                          Column(  crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              TextCustom(color: blueApp, text:    order[index].orderAmount.toString(),size: 20,),
+                              Row(
+                                children: [
+                                  CircleAvatar(backgroundColor: greencontainer,radius: 6,),sw10,
+                                  TextCustom(color: greytext, text:    order[index].orderStatus.toString(),size: 16,),
+                                ],
+                              )
+
+                            ],
+                          )
 
 
-                          ],),
-                          TextCustom(color: greytext, text:order[index].orderTo.toString(),size: 10, )
-                        ],
-                      )
+
+                      ],),
+                      TextCustom(color: greytext, text:order[index].orderTo.toString(),size: 12, )
                     ],
                   );
                 }, separatorBuilder: ( context,index){

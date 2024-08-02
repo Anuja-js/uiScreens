@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const black=Colors.black;
+const black26= Colors.black26;
 const blue =Colors.blue;
 const blueApp=Color(0xff136eb4);
 const white=Colors.white;

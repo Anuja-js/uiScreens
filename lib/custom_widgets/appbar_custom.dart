@@ -20,8 +20,8 @@ class AppbarCustom extends StatelessWidget {
     return AppBar(elevation: 0,
       backgroundColor: blueApp,
       centerTitle: center==true?true:false,
-      title: TextCustom(
-        text: tittle,color: white,
+      title: Text(
+        tittle,style: TextStyle(color: white,fontSize: 18),
       ),
       leading: icon,
       actions: [

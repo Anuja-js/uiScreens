@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uiscreens/screens/dukaan_premium.dart';
 import 'package:uiscreens/screens/payments.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
-     home: PaymentScreen(),
+     home: DukaanPremiumScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
