@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 const black=Colors.black;
 const black26= Colors.black26;
+const background= Color(0xfff5f5f5);
 const blue =Colors.blue;
 const blueApp=Color(0xff136eb4);
 const white=Colors.white;
 const grey=Colors.grey;
+const greyback=Color(0xffe5eedf);
 const greyIcon=Color(0xff707070);
 const blueLight=Color(0xffc2d9ed);
 const greyversion=Color(0xffd5d5d5);

@@ -19,7 +19,7 @@ class AdditionalInformation extends StatelessWidget {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size(MediaQuery.of(context).size.width, 60),
-        child: AppbarCustom(center: false,
+        child: AppbarCustom(center: true,
           icon: IconCustom(size: 30, color: white, icon: Icons.arrow_back_outlined),
           tittle: "Additional Information",
         ),

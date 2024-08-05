@@ -37,6 +37,52 @@ class _DukaanPremiumScreenState extends State<DukaanPremiumScreen> {
       "image": "assets/images/4.png"
     },
   ];
+  List questions = [
+    {
+      "question": "What types of businesses can use Dukaan\nPremium?",
+      "ans": '''Dukaan caters to a wide variety of sellers. Be it a
+small grocery store or a big legacy brand - anyone
+who wants to sell their products/services online -
+Dukaan is the perfect platform for you.''',
+    },
+    {
+      "question": "What is your refund policy?",
+      "ans": '''Dukaan caters to a wide variety of sellers. Be it a
+small grocery store or a big legacy brand - anyone
+who wants to sell their products/services online -
+Dukaan is the perfect platform for you.''',
+    },
+    {
+      "question": "Will there be an automatic charge after the paid trial?",
+      "ans": '''Dukaan caters to a wide variety of sellers. Be it a
+small grocery store or a big legacy brand - anyone
+who wants to sell their products/services online -
+Dukaan is the perfect platform for you.''',
+    },
+    {
+      "question": "What payment methods do you offer?",
+      "ans": '''Dukaan caters to a wide variety of sellers. Be it a
+small grocery store or a big legacy brand - anyone
+who wants to sell their products/services online -
+Dukaan is the perfect platform for you.''',
+    },
+    {
+      "question": "What happens when my free trial ends?",
+      "ans": '''Dukaan caters to a wide variety of sellers. Be it a
+small grocery store or a big legacy brand - anyone
+who wants to sell their products/services online -
+Dukaan is the perfect platform for you.''',
+    },
+    {
+      "question": "What are the terms for the custom domain?",
+      "ans": '''Dukaan caters to a wide variety of sellers. Be it a
+small grocery store or a big legacy brand - anyone
+who wants to sell their products/services online -
+Dukaan is the perfect platform for you.''',
+    },
+  ];
+  bool isPress = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,8 +118,8 @@ class _DukaanPremiumScreenState extends State<DukaanPremiumScreen> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
                         color: white, // White background for the card
-                        boxShadow: [
-                          const BoxShadow(
+                        boxShadow: const [
+                          BoxShadow(
                             color: black26,
                             blurRadius: 8.0,
                             offset: Offset(0, 2),
@@ -107,7 +153,7 @@ class _DukaanPremiumScreenState extends State<DukaanPremiumScreen> {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     top: 62,
                     right: 120,
                     child: Text(
@@ -122,8 +168,8 @@ class _DukaanPremiumScreenState extends State<DukaanPremiumScreen> {
                   ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 120, left: 15, bottom: 20),
+              const Padding(
+                padding: EdgeInsets.only(top: 120, left: 15, bottom: 20),
                 child: Text(
                   "Features",
                   textAlign: TextAlign.start,
@@ -137,7 +183,7 @@ class _DukaanPremiumScreenState extends State<DukaanPremiumScreen> {
               ListView.builder(
                   itemCount: datas.length,
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   itemBuilder: (BuildContext context, index) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(
@@ -147,8 +193,8 @@ class _DukaanPremiumScreenState extends State<DukaanPremiumScreen> {
                           Container(
                             width: 60,
                             height: 60,
-                            margin: EdgeInsets.only(right: 15),
-                            padding: EdgeInsets.all(15),
+                            margin: const EdgeInsets.only(right: 15),
+                            padding: const EdgeInsets.all(15),
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 border: Border.all(
@@ -168,7 +214,7 @@ class _DukaanPremiumScreenState extends State<DukaanPremiumScreen> {
                               Text(
                                 datas[index]["tittle"].toString(),
                                 textAlign: TextAlign.start,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: blackHead,
                                   fontSize: 14,
@@ -184,59 +230,240 @@ class _DukaanPremiumScreenState extends State<DukaanPremiumScreen> {
                       ),
                     );
                   }),
-              Divider(
+              const Divider(
                 height: 50,
                 thickness: 4,
                 color: greyborder,
               ),
-              Text(
-                "What is Dukaan Premium?",
-                textAlign: TextAlign.start,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: blackHead,
-                  fontSize: 15,
+              const Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 15,
+                ),
+                child: Text(
+                  "What is Dukaan Premium?",
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: blackHead,
+                    fontSize: 15,
+                  ),
                 ),
               ),
-              Divider(
-                height: 50,
+              Container(
+                width: MediaQuery.of(context).size.width,
+                margin: const EdgeInsets.only(left: 15, right: 15, top: 15),
+                height: 200,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: black,
+                    image: const DecorationImage(
+                      image: AssetImage(
+                        "assets/images/youtube.png",
+                      ),
+                      fit: BoxFit.fill,
+                    )),
+              ),
+              const Divider(
+                height: 45,
                 thickness: 4,
                 color: greyborder,
               ),
-              Text(
-                "Frequently asked questions",
-                textAlign: TextAlign.start,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: blackHead,
-                  fontSize: 15,
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                child: Text(
+                  "Frequently asked questions",
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: blackHead,
+                    fontSize: 15,
+                  ),
                 ),
               ),
-              ListView.separated(
-                shrinkWrap: true,physics: NeverScrollableScrollPhysics(),
+              ListView.builder(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
                   itemBuilder: (context, index) {
-                    return Column(children: [
-                      Text(
-                      "Frequently asked questions",
-                      textAlign: TextAlign.start,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: blackHead,
-                        fontSize: 12,
-                      ),),
-                      TextCustom(
-                          color: greytext,
-                          text: datas[index]["subtittle"].toString())
-                    ],);
-                  },
-                  separatorBuilder: (context, index) {
-                    return  Divider(
-                      height: 50,
-                      thickness: 1,
-                      color: greyborder,
+
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              questions[index]["question"].toString(),
+                              textAlign: TextAlign.start,
+                              style: const TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: blackHead,
+                                fontSize: 12,
+                              ),
+                            ),
+                            IconButton(
+                                onPressed: () {
+                                  isPress = !isPress;
+                                  setState(() {});
+                                },
+                                icon: isPress == true && index==0
+                                    ? const Icon(
+                                        Icons.minimize_outlined,
+                                        color: blackHead,
+                                      )
+                                    : const Icon(
+                                        Icons.add,
+                                        color: blackHead,
+                                      ))
+                          ],
+                        ),
+                        if(index==0)TextCustom(
+                            color: greytext,
+                            text: isPress == true
+                                ? questions[index]["ans"].toString()
+                                : ""),
+                        sh10,
+                        const Divider(
+                          height: 1,
+                          thickness: 1,
+                          color: greyborder,
+                        ),
+                      ],
                     );
                   },
-                  itemCount: 8)
+                  itemCount: questions.length),
+              const Divider(
+                height: 45,
+                thickness: 4,
+                color: greyborder,
+              ),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                child: Text(
+                  "Need help? Get in touch",
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: blackHead,
+                    fontSize: 15,
+                  ),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 15, vertical: 10),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 20, horizontal: 55),
+                      decoration: BoxDecoration(
+                        color: white,
+                        border: Border.all(
+                          color: greytext,
+                          width: 0.3,
+                        ),
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(8.0),
+                        ),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Icon(Icons.messenger_outline_outlined),
+                          sh10,
+                          TextCustom(
+                            color: blackHead,
+                            text: "Live Chat",
+                            size: 12,
+                          )
+                        ],
+                      )),
+                  Container(
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 15, vertical: 15),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 20, horizontal: 55),
+                      decoration: BoxDecoration(
+                        color: white,
+                        border: Border.all(
+                          color: greytext,
+                          width: 0.3,
+                        ),
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(8.0),
+                        ),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Icon(Icons.phone_outlined),
+                          sh10,
+                          TextCustom(
+                            color: blackHead,
+                            text: "Phone Call",
+                            size: 12,
+                          )
+                        ],
+                      )),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+      bottomNavigationBar: Container(
+        decoration: const BoxDecoration(
+          border: Border(
+            top: BorderSide(
+              color: greyBottom, // Border color
+              width: 1.0, // Border width
+            ),
+          ),
+        ),
+        child: BottomAppBar(
+          color: white,
+          elevation: 5,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 15, horizontal: 40),
+                  decoration: const BoxDecoration(
+                    color: white,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(8.0),
+                    ),
+                  ),
+                  child: TextCustom(
+                    color: blueApp,
+                    text: "Select Domain",
+                    size: 13,
+                  )),
+              Container(
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 15, horizontal: 40),
+                  decoration: const BoxDecoration(
+                    color: blueApp,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(8.0),
+                    ),
+                  ),
+                  child: TextCustom(
+                    color: white,
+                    text: "Get Premium",
+                    size: 13,
+                  )),
             ],
           ),
         ),

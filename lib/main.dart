@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:uiscreens/screens/additional_information.dart';
+import 'package:uiscreens/screens/catalogue_screen.dart';
 import 'package:uiscreens/screens/dukaan_premium.dart';
+import 'package:uiscreens/screens/manage_storage.dart';
+import 'package:uiscreens/screens/oder_screen.dart';
 import 'package:uiscreens/screens/payments.dart';
 
 void main() {
@@ -12,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
-     home: DukaanPremiumScreen(),
+     home: CatalogueScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

@@ -21,7 +21,7 @@ class PaymentScreen extends StatelessWidget {
     Orders("Order #1359971","Apr 1, 10:37 AM","₹599.25","₹599.25 deposited to 58860200000138","Successful","assets/images/foldedblue.jpg"),
     Orders("Order #1265103","Mar 6, 01:26 PM","₹2,297","₹2297 deposited to 58860200000138","Successful","assets/images/white.jpeg"),
     Orders("Order #1173537","Feb 22, 10:04 PM","₹599.25","₹599.25 deposited to 58860200000138","Successful","assets/images/red.jpeg"),
-    Orders("Order #1176731","Feb 21, 01:25 PM","₹524.25","₹524.25 deposited to 58860200000138","Successful","assets/images/tshirt.jpeg"),
+    Orders("Order #1176731","Feb 21, 01:25 PM","₹524.25","₹524.25 deposited to 58860200000138","Successful","assets/images/foldedblue.jpg"),
     Orders("Order #1174245","Feb 21, 10:20 AM","₹699","₹699 deposited to 58860200000138","Successful","assets/images/white.jpeg"),
     Orders("Order #1177731","Feb 20, 9:54 AM","₹1123.5","₹1123.5 deposited to 58860200000138","Successful","assets/images/red.jpeg"),
     Orders("Order #1174282","Feb 19, 10:47 AM","₹799","₹799 deposited to 58860200000138","Successful","assets/images/red.jpeg"),
